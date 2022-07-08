@@ -37,10 +37,12 @@ jobs:
         run: west build -s zmk/app -b rotr -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: ROTR Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+      - name: Export short SHA
+        run: export git_hash=$(git rev-parse --short "$GITHUB_SHA")
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 rotr.uf2
+        run: cp build/zephyr/zmk.uf2 rotr-${git_hash}.uf2
       - name: Archive (ROTR)
         uses: actions/upload-artifact@v2
         with:
-          name: firmware
+          name: firmware-${git_hash}
           path: rotr.uf2
