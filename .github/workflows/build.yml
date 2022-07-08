@@ -40,9 +40,9 @@ jobs:
       - name: Export short SHA
         run: export git_hash=$(git rev-parse --short "$GITHUB_SHA")
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 rotr-${git_hash}.uf2
+        run: cp build/zephyr/zmk.uf2 "rotr-${GITHUB_SHA}.uf2"
       - name: Archive (ROTR)
         uses: actions/upload-artifact@v2
         with:
-          name: firmware-${git_hash}
-          path: rotr-${git_hash}.uf2
+          name: firmware-${GITHUB_SHA}
+          path: rotr-${GITHUB_SHA}.uf2
