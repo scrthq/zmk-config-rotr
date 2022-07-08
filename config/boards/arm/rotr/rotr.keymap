@@ -33,14 +33,14 @@
 			//LEFT | SPACE | RIGHT
 			bindings = <&kp LEFT &lt 4 SPACE &kp RIGHT>;
 			//<-- PG UP | PG DOWN -->
-			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
 		};
 		three {
 			//YELLOW LED
 			//MUTE | PLAY/PAUSE | NEXT
 			bindings = <&kp C_MUTE &lt 4 C_PP &kp C_NEXT>;
-			//<-- PG UP | PG DOWN -->
-			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+			//<-- PG DOWN | PG UP -->
+			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
 		};
 		shift {
 			//BT CLR | ______ | RGB TOG
