@@ -45,4 +45,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: firmware-${git_hash}
-          path: rotr.uf2
+          path: rotr-${git_hash}.uf2
