@@ -32,7 +32,7 @@
 			//BLUE LED
 			//LEFT | SPACE | RIGHT
 			bindings = <&kp LEFT &lt 4 SPACE &kp RIGHT>;
-			//<-- PG UP | PG DOWN -->
+			//<-- PG DOWN | PG UP -->
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
 		};
 		three {
