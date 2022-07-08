@@ -44,5 +44,5 @@ jobs:
       - name: Archive (ROTR)
         uses: actions/upload-artifact@v2
         with:
-          name: firmware-${GITHUB_SHA}
+          name: firmware
           path: rotr.uf2
